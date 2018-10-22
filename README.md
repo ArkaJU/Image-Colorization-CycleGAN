@@ -6,7 +6,7 @@ Automatic image colorization has been a popular image-to-image translation probl
 
 # Overview
 
-Image-to-image  translation  is  a  class  of  vision  andgraphics problems where the goal is to learn the mapping
+Image-to-image  translation  is  a  class  of  vision  and graphics problems where the goal is to learn the mapping
 between an input image and an output image using a training set of aligned image pairs. But for many tasks, paired training data may not be available like this problem of image colorization. This is where the power of CycleGAN becomes apparent. Superiority of CycleGAN has been demonstrated on several tasks where paired training data hardly exist, e.g., in object transfiguration and painting style and season transfer
 
 # Model
@@ -22,3 +22,32 @@ They compete with their corresponding adversarial discriminators.
 To regularize the model, the authors introduce the constraint of cycle-consistency - if we transform from source distribution to target and then back again to source distribution, we should get samples from our source distribution.
 
 ![](images/CycleLoss.png)
+
+# Data
+
+The experiment was done on 2 datasets: 
+1. RGB images of flowers(domain A) and their grayscale version(domain B): 2K images in each folder.
+2. Frames extracted from old B&W movies(domain A) and new movies (domain B): 15K images in each folder.
+
+
+# Training
+
+The models were trained on NVIDIA Tesla K80 GPU (available on Google Colab). It took about 15 hours for the first model to train. The 2nd model took a bit longer to achieve decent results, after training about 20 hours. Sample results were frequently monitored through TensorBoard.
+
+# Results
+
+The first model yielded fine results. Some of the best ones are shown below:
+![](images/results/1.PNG)
+![](images/results/2.PNG)
+
+
+For the second model the results were also good, some of which are shown below:
+![](images/results/3.PNG)
+![](images/results/4.PNG)
+
+
+# References
+- Original Paper: ![Arxiv](https://arxiv.org/abs/1703.10593)
+- Nice blog: ![CycleGAN](https://hardikbansal.github.io/CycleGANBlog/)
+- I found a video which attempts the same problem; movie colorization. Results are quite similar. ![YouTube](https://www.youtube.com/watch?v=k7p8NMxY7Fg)
+
