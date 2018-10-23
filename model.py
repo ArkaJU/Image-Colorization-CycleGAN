@@ -29,15 +29,15 @@ class cyclegan(object):
         self.sess = sess
         self.batch_size = 1
         self.image_size = 256
-        self.load_size = 286
-        self.fine_size = 256
+        self.load_size = 286        # scale images to this size
+        self.fine_size = 256        # then crop to this size
         self.train_size = 1e8
         self.input_c_dim = 3        # of input image channels            
         self.output_c_dim = 3       # of output image channels
         self.L1_lambda = 10.0
-        self.dataset_dir = 'iphone2dslr_flower'
-        self.ndf = 64
-        self.ngf = 64
+        self.dataset_dir = 'flower_images'
+        self.ndf = 64               # number of generator filters in first conv layer
+        self.ngf = 64               # number of discriminator filters in first conv layer
         
         self.phase = 'train'
 
