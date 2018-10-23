@@ -50,5 +50,5 @@ For the second model the results were also good, some of which are shown below:
 # References
 - Original Paper: ![Arxiv](https://arxiv.org/abs/1703.10593)
 - Nice blog: ![CycleGAN](https://hardikbansal.github.io/CycleGANBlog/)
-- I found a video in which the same problem is attempted; movie colorization. ![YouTube](https://www.youtube.com/watch?v=k7p8NMxY7Fg)
+- I found a video in which the same problem is attempted; movie colorization. https://www.youtube.com/watch?v=k7p8NMxY7Fg
 - Base project ![Github](https://github.com/xhujoy/CycleGAN-tensorflow)
