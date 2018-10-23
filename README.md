@@ -26,13 +26,14 @@ To regularize the model, the authors introduce the constraint of cycle-consisten
 # Data
 
 The experiment was done on 2 datasets: 
-1. RGB images of flowers(domain A) and their grayscale version(domain B): 2K images in each folder.
-2. Frames extracted from old B&W movies(domain A) and new movies (domain B): 15K images in each folder.
+1. Grayscale of flowers(domain A) and their RGB version(domain B): 2K images in each folder.
+2. Frames extracted from old B&W movies(domain A) and new movies (domain B): 24K images in each folder.
 
+The second problem is a very interesting one as the frames are taken from very old movies(1950s and before) and there is no scope for paired data, making this a useful application for CycleGAN.
 
 # Training
 
-The models were trained on NVIDIA Tesla K80 GPU (available on Google Colab). It took about 15 hours for the first model to train. The 2nd model took a bit longer to achieve decent results, after training about 20 hours. Sample results were frequently monitored through TensorBoard.
+The models were trained on a GPU. It took about 15 hours for the first model to train. The 2nd model took a bit longer to achieve decent results, after training about 20 hours. Sample results were frequently monitored through TensorBoard.
 
 # Results
 
@@ -50,4 +51,4 @@ For the second model the results were also good, some of which are shown below:
 - Original Paper: ![Arxiv](https://arxiv.org/abs/1703.10593)
 - Nice blog: ![CycleGAN](https://hardikbansal.github.io/CycleGANBlog/)
 - I found a video in which the same problem is attempted; movie colorization. ![YouTube](https://www.youtube.com/watch?v=k7p8NMxY7Fg)
-
+- Base project ![Github](https://github.com/xhujoy/CycleGAN-tensorflow)
